@@ -1,0 +1,10 @@
+﻿This is the repo that contain files to build rhel-extra RPM
+------------------------------------------------------------------
+
+Directory utilities
+-------------------
+
+patches: patches for the diferent sources
+scripts: scripts that we need in to package SLES build
+sources: files that we need for sources
+specs: specs files for the diferent packages
