@@ -6,7 +6,7 @@ Summary:        Gettext support for Smarty3
 Group:          Development/Libraries
 License:        LGPLv2
 URL:            https://forge.fusiondirectory.org/projects/smarty3-i18n
-Source0:        http://repos.fusiondirectory.org/sources/1.0/smarty3-i18n-1.0.tar.gz
+Source0:        http://repos.fusiondirectory.org/sources/1.0/smarty3-i18n/smarty3-i18n-1.0.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Requires:       php-Smarty3
 BuildArch:      noarch
