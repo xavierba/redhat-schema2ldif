@@ -18,7 +18,7 @@ URL:          http://www.prototypejs.org/
 # We cannot use the archive tarball from github
 # as we don't have yet requirement for build (rake, sprockets)
 Source0:      https://ajax.googleapis.com/ajax/libs/prototype/%{version}/prototype.js
-Source1:      https://raw.github.com/sstephenson/prototype/master/LICENSE
+Source1:      LICENSE
 Source2:      prototype.conf
 
 BuildRoot:    %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
