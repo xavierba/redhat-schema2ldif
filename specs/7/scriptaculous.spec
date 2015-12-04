@@ -15,7 +15,7 @@ Group:        Applications/Internet
 License:      MIT
 URL:          http://script.aculo.us/
 
-Source0:      http://script.aculo.us/dist/%{name}-js-%{version}.zip
+Source0:      http://script.aculo.us/dist/scriptaculous-js-%{version}.zip
 Source1:      %{name}.conf
 
 BuildRoot:    %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
