@@ -62,14 +62,14 @@ function createSpec()
 {
   # Create new spec with good version and sub version
   cp $SPECDIR/$package.spec $RPMBUILD/SPECS/$package.spec
-  
+
   if [ $version ] ; then
     sed -i "s/_VERSION_/$version/g" "$RPMBUILD/SPECS/$package.spec"
   else
     VERSION="$(echo $(cat  $RPMBUILD/SPECS/$package.spec | grep 'Version:' | cut -d ':' -f2))"
     sed -i "s/_VERSION_/$VERSION/g" "$RPMBUILD/SPECS/$package.spec"
-  fi 
-  
+  fi
+
   sed -i "s/_RELEASE_/$jenkinssubversion/g" "$RPMBUILD/SPECS/$package.spec"
 
   if [ "$package" = 'POE-Component-Server-JSONRPC' ] ; then
@@ -90,9 +90,6 @@ function downloadSrcBySpec()
   # Download SRC
   cd $RPMBUILD/SOURCES/
   wget "http:$SRC" || exit 2
-
-  # Copy the copyrights
-  # cp /home/jswaelens/redhat/sources/argonaut-libs/* $RPMBUILD/SOURCES/
 }
 
 # Build RPM
@@ -108,37 +105,12 @@ function build()
   # Create SRPMS
   rpmbuild -bs $RPMBUILD/SPECS/$package.spec --define "rhel $RHEL" || exit 2
 
-  if [ "$package" = 'perl-POE-Component-Schedule' ] ; then
-    sudo yum install perl-DateTime-Set $BUILDDIR/RPMS/perl-DateTime-TimeZone* -y
-    rpmbuild -ba $RPMBUILD/SPECS/$package.spec || exit 2
+  NAME="$(echo $(cat  $RPMBUILD/SPECS/$package.spec | grep 'Name:' | cut -d ':' -f2))"
+  /usr/bin/mock -r ${MOCK_CONF} $RPMBUILD/SRPMS/${NAME}*.src.rpm --define "rhel $RHEL" || exit 2
 
-   # Move the packages rpmbuild
-   mv $RPMBUILD/SRPMS/* $BUILDDIR/SRPMS/
-   mv $RPMBUILD/RPMS/noarch/* $BUILDDIR/RPMS/
-
-  elif [ "$package" = 'perl-POE-Component-Server-SimpleHTTP' ] ; then
-    rpmbuild -ba $RPMBUILD/SPECS/$package.spec || exit 2
-
-   # Move the packages rpmbuild
-   mv $RPMBUILD/SRPMS/* $BUILDDIR/SRPMS/
-   mv $RPMBUILD/RPMS/noarch/* $BUILDDIR/RPMS/
-
-
-  elif [ "$package" = 'perl-MooseX-POE' ] ; then
-    rpmbuild -ba $RPMBUILD/SPECS/$package.spec || exit 2
-
-   # Move the packages rpmbuild
-   mv $RPMBUILD/SRPMS/* $BUILDDIR/SRPMS/
-   mv $RPMBUILD/RPMS/noarch/* $BUILDDIR/RPMS/
-
-  else
-    NAME="$(echo $(cat  $RPMBUILD/SPECS/$package.spec | grep 'Name:' | cut -d ':' -f2))"
-    /usr/bin/mock -r ${MOCK_CONF} $RPMBUILD/SRPMS/${NAME}-${VERSION}-${jenkinssubversion}.src.rpm --define "rhel $RHEL" || exit 2
-
-    # Move the packages of mock
-    mv /var/lib/mock/${MOCK_CONF}/root/builddir/build/SRPMS/* $BUILDDIR/SRPMS/
-    mv /var/lib/mock/${MOCK_CONF}/root/builddir/build/RPMS/* $BUILDDIR/RPMS/
-  fi
+  # Move the packages of mock
+  mv /var/lib/mock/${MOCK_CONF}/root/builddir/build/SRPMS/* $BUILDDIR/SRPMS/
+  mv /var/lib/mock/${MOCK_CONF}/root/builddir/build/RPMS/* $BUILDDIR/RPMS/
 }
 
 ##############################
