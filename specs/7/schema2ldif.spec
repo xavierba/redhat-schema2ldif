@@ -1,6 +1,6 @@
 Name:           schema2ldif
 Version:        1.0
-Release:        1.%{dist}
+Release:        1%{?dist}
 Summary:        Tool to convert schema into ldif format
 
 Group:          Applications/System
