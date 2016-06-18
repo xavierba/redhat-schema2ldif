@@ -11,7 +11,7 @@ Group:          Development/Libraries
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
-Requires:       php >= 5.2
+Requires:       php >= 5.4
 
 %description
 Although Smarty is known as a "Template Engine", it would be more accurately
@@ -53,8 +53,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Jun 18 2016 SWAELENS Jonathan <jonathan@opensides.be> - 3.1.18-2
+- Bump php version
+
 * Thu Apr 10 2014 Swaelens Jonathan <swaelens.jonathan@openmailbox.org> - 3.1.18-1
 - Update to the version 3.1.18
+
 * Sun Oct 06 2013 Benoit Mortier <benoit.mortier@opensides.be> - 3.1.15-1
 - Initial Import
 
