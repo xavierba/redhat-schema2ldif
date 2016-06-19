@@ -1,6 +1,6 @@
 Name:           php-Smarty3-i18n
 Version:        1.0     
-Release:        1%{dist}
+Release:        2%{dist}
 Summary:        Gettext support for Smarty3
 
 Group:          Development/Libraries

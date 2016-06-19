@@ -1,7 +1,7 @@
 Name:           php54-php-Smarty3
 Summary:        Template/Presentation Framework for PHP
 Version:        3.1.18
-Release:        1%{?dist}
+Release:        2%{?dist}
 
 Source0:        http://www.smarty.net/files/Smarty-%{version}.tar.gz
 URL:            http://www.smarty.net
