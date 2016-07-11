@@ -8,7 +8,7 @@ License:        LGPLv2
 URL:            https://forge.fusiondirectory.org/projects/smarty3-i18n
 Source0:        http://repos.fusiondirectory.org/sources/1.0/smarty3-i18n/smarty3-i18n-1.0.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
-Requires:       php-Smarty3 >= 5.4
+Requires:       php-Smarty3
 BuildArch:      noarch
 Obsoletes:      smarty-gettext
 
@@ -43,6 +43,9 @@ rm -rf %{buildroot}
 %{_bindir}/tsmarty2c
 
 %changelog
+* Mon Jul 11 2016 SWAELENS Jonathan <jonathan@opensides.be> - 1.0-3
+- Remove bumping php version beceause php-Smarty3 don't have the version number of PHP
+
 * Sat Jun 18 2016 SWAELENS Jonathan <jonathan@opensides.be> - 1.0-2
 - Bump php version
 
