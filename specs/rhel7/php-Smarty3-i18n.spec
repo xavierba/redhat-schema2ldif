@@ -1,12 +1,12 @@
 Name:           php-Smarty3-i18n
-Version:        1.0     
+Version:        1.1.0
 Release:        2%{dist}
 Summary:        Gettext support for Smarty3
 
 Group:          Development/Libraries
 License:        LGPLv2
-URL:            https://forge.fusiondirectory.org/projects/smarty3-i18n
-Source0:        http://repos.fusiondirectory.org/sources/1.0/smarty3-i18n/smarty3-i18n-1.0.tar.gz
+URL:            https://github.com/smarty-gettext/smarty-gettext
+Source0:        https://github.com/smarty-gettext/smarty-gettext/archive/1.1.0.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Requires:       php-Smarty3
 BuildArch:      noarch
@@ -38,11 +38,14 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc README COPYING ChangeLog AUTHORS
+%doc README COPYING ChangeLog
 %{_datadir}/php/Smarty3/plugins/block.t.php
 %{_bindir}/tsmarty2c
 
 %changelog
+* Tue Apr 25 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.1.0-1
+- Use smarty-gettext github as official source
+
 * Mon Jul 11 2016 SWAELENS Jonathan <jonathan@opensides.be> - 1.0-3
 - Remove bumping php version beceause php-Smarty3 don't have the version number of PHP
 
