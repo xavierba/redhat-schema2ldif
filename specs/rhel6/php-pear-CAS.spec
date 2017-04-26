@@ -25,12 +25,12 @@ Source0:        https://github.com/Jasig/phpCAS/archive/1.3.4.tar.gz
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-BuildRequires:  centos-release-scl
 BuildRequires:  php54-composer(theseer/autoload)
+BuildRequires:  php54-php-pear
 
 Requires(post): %{__pear}
 Requires(postun): %{__pear}
-Requires:       php54-pear(PEAR)
+Requires:       php54-php-pear(PEAR)
 Requires:       php54-curl
 Requires:       php54-dom
 Requires:       php54-pcre
