@@ -1,4 +1,4 @@
-Name:           php54-php-Smarty3-i18n
+Name:           php54-php-Smarty3-gettext
 Version:        1.1.0
 Release:        2%{dist}
 Summary:        Gettext support for Smarty3
@@ -17,7 +17,6 @@ Smarty gettext plug-in provides an internationalization support
 for the PHP template engine Smarty version 3.
 
 %prep
-%setup -q -n smarty3-i18n-%{version}
 
 %build
 
