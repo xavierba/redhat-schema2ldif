@@ -25,7 +25,7 @@ Source0:        https://github.com/Jasig/phpCAS/archive/1.3.4.tar.gz
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-BuildRequires:  php54-composer(theseer/autoload)
+#BuildRequires:  php54-composer(theseer/autoload)
 BuildRequires:  php54-php-pear
 
 Requires(post): %{__pear}
@@ -39,8 +39,8 @@ Requires:       php54-session
 Requires:       php54-spl
 # Optional: php54-imap (when use Proxied Imap)
 
-#Provides:       php54-pear(%{channel}/%{pear_name}) = %{version}
-#Provides:       php54-composer(jasig/phpcas) = %{version}
+Provides:       php54-pear(%{channel}/%{pear_name}) = %{version}
+Provides:       php54-composer(jasig/phpcas) = %{version}
 # this library is mostly known as phpCAS
 Provides:       phpCAS = %{version}-%{release}
 
