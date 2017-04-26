@@ -21,7 +21,7 @@ Group:          Development/Libraries
 License:        ASL 2.0
 URL:            https://wiki.jasig.org/display/CASC/phpCAS
 
-Source0:        http://downloads.jasig.org/cas-clients/php/%{version}%{?prever}/%{pear_name}-%{version}%{?prever}.tgz
+Source0:        https://github.com/Jasig/phpCAS/archive/1.3.4.tar.gz
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
@@ -105,6 +105,9 @@ fi
 
 
 %changelog
+* Wed Apr 26 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.3.4-4
+- Use new source link because the old one was broken
+
 * Wed Feb 01 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.3.4-3
 - make packages compatible with php 5.4
 
