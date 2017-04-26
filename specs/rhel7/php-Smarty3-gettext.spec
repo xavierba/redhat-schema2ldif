@@ -35,7 +35,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc README.md COPYING ChangeLog
+%doc ChangeLog.md  composer.json  COPYING  README.md  tests
 %{_datadir}/php/Smarty3/plugins/block.t.php
 %{_bindir}/tsmarty2c
 
