@@ -17,7 +17,7 @@ It support various schema format and export clean an well format schema
 in ldif format.
 
 %prep
-%setup -q -n schema2ldif-%{version}
+%setup -q -n schema2ldif-1.0
 %patch0 -p1
 
 %build
