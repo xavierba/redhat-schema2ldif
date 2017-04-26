@@ -41,7 +41,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc README LICENSE
+%doc ChangeLog LICENSE
 %{_bindir}/schema2ldif
 %{_bindir}/ldap-schema-manager
 %{_mandir}/man1/schema2ldif.1.gz
