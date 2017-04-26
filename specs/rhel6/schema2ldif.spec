@@ -6,7 +6,7 @@ Summary:        Tool to convert schema into ldif format
 Group:          Applications/System
 License:        BSD
 URL:            https://forge.fusiondirectory.org/projects/schema2ldif
-Source0:        http://repos.fusiondirectory.org/sources/1.0/schema2ldif/schema2ldif-1.0.tar.gz
+Source0:        http://repos.fusiondirectory.org/sources/1.0/schema2ldif/schema2ldif-1.3.tar.gz
 Patch0:         default-path-for-ldap-schema-manager.patch
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:      noarch
@@ -17,7 +17,7 @@ It support various schema format and export clean an well format schema
 in ldif format.
 
 %prep
-%setup -q -n schema2ldif-%{version}
+%setup -q -n schema2ldif-1.3
 %patch0 -p1
 
 %build
@@ -41,7 +41,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc README LICENSE
+%doc Changelog LICENSE
 %{_bindir}/schema2ldif
 %{_bindir}/ldap-schema-manager
 %{_mandir}/man1/schema2ldif.1.gz
