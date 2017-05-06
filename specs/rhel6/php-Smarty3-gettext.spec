@@ -21,9 +21,6 @@ for the PHP template engine Smarty version 3.
 %build
 
 %install
-# Clean buildroot before install
-rm -rf %{buildroot} 
-
 # Install the Smarty Plugin
 install -d -m 0755 %{buildroot}%{_datadir}/php/Smarty3/plugins
 install -p -m 0644 block.t.php %{buildroot}%{_datadir}/php/Smarty3/plugins
@@ -37,7 +34,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc README COPYING ChangeLog
+%doc ChangeLog.md  composer.json  COPYING  README.md  tests
 %{_datadir}/php/Smarty3/plugins/block.t.php
 %{_bindir}/tsmarty2c
 
