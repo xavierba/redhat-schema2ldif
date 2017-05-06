@@ -17,6 +17,7 @@ Smarty gettext plug-in provides an internationalization support
 for the PHP template engine Smarty version 3.
 
 %prep
+%setup -n smarty-gettext-1.1.0
 
 %build
 
