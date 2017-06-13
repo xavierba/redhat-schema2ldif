@@ -10,7 +10,7 @@ Source0:        https://github.com/smarty-gettext/smarty-gettext/archive/1.1.0.t
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Requires:       php54-php-Smarty3
 BuildArch:      noarch
-Obsoletes:      smarty-gettext
+Obsoletes:      smarty-gettext, php-Smarty3-i18n
 
 %description
 Smarty gettext plug-in provides an internationalization support
@@ -40,6 +40,9 @@ rm -rf %{buildroot}
 %{_bindir}/tsmarty2c
 
 %changelog
+* Tue Jun 13 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.1.0-2
+- Add php-Smarty3-i18n as obsoletes
+
 * Tue Apr 25 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.1.0-1
 - Use smarty-gettext github as official source
 
