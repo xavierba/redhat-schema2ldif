@@ -7,6 +7,7 @@ License:        BSD
 URL:            https://gitlab.fusiondirectory.org/fusiondirectory/schema2ldif
 Source0:        https://repos.fusiondirectory.org/sources/%{name}/%{name}-%{version}.tar.gz
 Patch0:         default-path-for-ldap-schema-manager.patch
+BuildRequires:  perl-generators
 BuildArch:      noarch
 
 %description
