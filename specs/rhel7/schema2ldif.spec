@@ -21,9 +21,6 @@ in ldif format.
 %build
 
 %install
-# Clean buildroot before install
-rm -rf %{buildroot} 
-
 # Install the command line utility
 install -d %{buildroot}%{_bindir}
 install -p -m 0755 bin/schema2ldif %{buildroot}%{_bindir}/schema2ldif
