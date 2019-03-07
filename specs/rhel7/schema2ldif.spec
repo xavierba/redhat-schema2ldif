@@ -32,7 +32,6 @@ install -p -m 0644  man/schema2ldif.1 %{buildroot}%{_mandir}/man1/schema2ldif.1.
 install -p -m 0644  man/ldap-schema-manager.1 %{buildroot}%{_mandir}/man1/ldap-schema-manager.1.gz
 
 %files
-%defattr(-,root,root,-)
 %doc Changelog LICENSE
 %{_bindir}/schema2ldif
 %{_bindir}/ldap-schema-manager
