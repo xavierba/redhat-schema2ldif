@@ -31,9 +31,6 @@ install -d %{buildroot}%{_mandir}/man1/
 install -p -m 0644  man/schema2ldif.1 %{buildroot}%{_mandir}/man1/schema2ldif.1.gz
 install -p -m 0644  man/ldap-schema-manager.1 %{buildroot}%{_mandir}/man1/ldap-schema-manager.1.gz
 
-%clean
-rm -rf %{buildroot} 
-
 %files
 %defattr(-,root,root,-)
 %doc Changelog LICENSE
