@@ -11,8 +11,8 @@ BuildRequires:  perl-generators
 BuildArch:      noarch
 
 %description
-schema2ldif is a tool to convert files in ldap schema format to ldif. 
-It support various schema format and export clean an well format schema 
+schema2ldif is a tool to convert files in ldap schema format to ldif.
+It supports various schema formats and exports clean and well formatted schema
 in ldif format.
 
 %prep
