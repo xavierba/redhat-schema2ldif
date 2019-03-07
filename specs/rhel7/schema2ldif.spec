@@ -44,5 +44,5 @@ install -p -m 0644 man/ldap-schema-manager.1 %{buildroot}%{_mandir}/man1/
 * Tue Apr 25 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.3-1
 - Fixes #5490 We should have a generic tool ldap-schema-manager
 
-* Mon Oct 10 2013 Benoit Mortier <benoit.mortier@opensides.be> - 1.0-1
+* Thu Oct 10 2013 Benoit Mortier <benoit.mortier@opensides.be> - 1.0-1
 - Initial Release
