@@ -26,17 +26,17 @@ install -d %{buildroot}%{_bindir}
 install -p -m 0755 bin/schema2ldif %{buildroot}%{_bindir}/schema2ldif
 install -p -m 0755 bin/ldap-schema-manager %{buildroot}%{_bindir}/ldap-schema-manager
 
-#install the manpage
+# Install the manpages
 install -d %{buildroot}%{_mandir}/man1/
-install -p -m 0644  man/schema2ldif.1 %{buildroot}%{_mandir}/man1/schema2ldif.1.gz
-install -p -m 0644  man/ldap-schema-manager.1 %{buildroot}%{_mandir}/man1/ldap-schema-manager.1.gz
+install -p -m 0644 man/schema2ldif.1 %{buildroot}%{_mandir}/man1/
+install -p -m 0644 man/ldap-schema-manager.1 %{buildroot}%{_mandir}/man1/
 
 %files
 %doc Changelog LICENSE
 %{_bindir}/schema2ldif
 %{_bindir}/ldap-schema-manager
-%{_mandir}/man1/schema2ldif.1.gz
-%{_mandir}/man1/ldap-schema-manager.1.gz
+%{_mandir}/man1/schema2ldif.1.*
+%{_mandir}/man1/ldap-schema-manager.1.*
 
 %changelog
 * Tue Apr 25 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.3-1
