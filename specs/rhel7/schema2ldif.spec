@@ -1,6 +1,6 @@
 Name:           schema2ldif
 Version:        1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Tool to convert schema into ldif format
 
 License:        BSD-3-Clause
@@ -41,6 +41,9 @@ install -p -m 0644 man/ldap-schema-manager.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/man1/ldap-schema-manager.1.*
 
 %changelog
+* Tue Jul 18 2023 Xavier Bachelot <xavier@bachelot.org> - 1.3-2
+- Cleanup specfile.
+
 * Tue Apr 25 2017 SWAELENS Jonathan <jonathan@opensides.be> - 1.3-1
 - Fixes #5490 We should have a generic tool ldap-schema-manager
 
