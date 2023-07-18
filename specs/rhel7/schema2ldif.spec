@@ -5,7 +5,7 @@ Summary:        Tool to convert schema into ldif format
 
 License:        BSD-3-Clause
 URL:            https://gitlab.fusiondirectory.org/fusiondirectory/schema2ldif
-Source0:        https://repos.fusiondirectory.org/sources/%{name}/%{name}-%{version}.tar.gz
+Source0:        %{url}/-/archive/%{version}/%{name}-%{version}.tar.bz2
 Patch0:         default-path-for-ldap-schema-manager.patch
 BuildRequires:  perl-generators
 BuildArch:      noarch
